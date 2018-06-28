@@ -17,7 +17,20 @@ class Tree
   	end
   end
 
-  ruby_tree = Tree.new( {"grandpa" => {"dad" => {"child 1" => {}, "child 2" => {} }, "uncle" => {"child 3" => {} }  } })
+  ruby_tree = Tree.new( {
+    "grandpa" => {
+      "dad" => {
+        "child 1" => {},
+         "child 2" => {}
+         },
+      "uncle" => {
+        "child 3" => {}
+        }
+      },
+    "grandp2" => {
+      "dad" => { }
+      }
+    })
 
   puts 'visiting a node'
   ruby_tree.visit {|name| puts "name is #{name}"}
