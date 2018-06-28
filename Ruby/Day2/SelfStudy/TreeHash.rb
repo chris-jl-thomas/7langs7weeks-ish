@@ -6,14 +6,14 @@ class Tree
   end
 
   def visit_all(&block)
-  		treeData.each_pair do |key, value|
+  		tree.each_pair do |key, value|
   			block.call key
   			Tree.new(value).visit_all(&block)
   		end
   	end
 
   	def visit(&block)
-  		treeData.each_pair do |key, value| block.call key end
+  		tree.each_pair do |key, value| block.call key end
   	end
   end
 
